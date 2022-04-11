@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         display:'inline-block',
         alignItems:'center',
         textAlign:'center',
-        fontFamily:"Roboto",
         textTransform:'uppercase',
         fontSize:'40px',
         fontWeight:'bold',
@@ -18,7 +17,6 @@ const styles = StyleSheet.create({
         display:'inline-block',
         alignItems:'center',
         textAlign:'center',
-        fontFamily:"Roboto",
         fontSize:'18px',
         color: '#fff'
     }

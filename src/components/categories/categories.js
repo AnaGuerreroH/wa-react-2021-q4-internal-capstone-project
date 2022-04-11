@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     categoriesTitle:{
         fontSize: '2rem',
         fontWeight:'bold',
-        fontFamily:"Roboto"
     },
     itemContainer:{
         width: '100%'
@@ -37,7 +36,7 @@ function ListCategories(){
 
     return(
         <div className="categories" style={{paddingBottom: '45px'}}>
-            <div className='sectionTitle' style={{fontSize:'2rem', fontFamily:'Roboto', fontWeight: 'bold'}}>Categories</div>
+            <div className='sectionTitle' style={{fontSize:'2rem', fontWeight: 'bold'}}>Categories</div>
             <SafeAreaView styles={styles.container}>
                 <ScrollView horizontal contentContainerStyle={{flexGrow: 1, justifyContent: 'space-between'}}>
                     <FlatList

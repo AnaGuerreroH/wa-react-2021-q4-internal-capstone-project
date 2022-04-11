@@ -57,7 +57,7 @@ export default class ListProducts extends React.Component{
     render(){
         return(
             <div className="products" style={{paddingBottom: '45px'}}>
-                <div className='sectionTitle' style={{fontSize:'2rem', fontFamily:'Roboto', fontWeight: 'bold'}}>Our products</div>
+                <div className='sectionTitle' style={{fontSize:'2rem', fontWeight: 'bold'}}>Our products</div>
                 <div style={{paddingLeft: '10px', paddingRight: '10px', backgroundColor:'#f5f5f5'}}>
                     <SafeAreaView styles={styles.container}>
                         <ScrollView horizontal contentContainerStyle={{flexGrow: 1, justifyContent: 'space-between', backgroundColor:'#f5f5f5'}}>
