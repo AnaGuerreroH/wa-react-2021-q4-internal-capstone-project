@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/reactBoocamp/static/css/main.5b75e24b.css",
-    "main.js": "/reactBoocamp/static/js/main.8ec3c0f1.js",
-    "static/js/787.08dc6f92.chunk.js": "/reactBoocamp/static/js/787.08dc6f92.chunk.js",
-    "static/media/left-arrow.png": "/reactBoocamp/static/media/left-arrow.d1293a8649610471a10b.png",
-    "static/media/sofaIcon.jpeg": "/reactBoocamp/static/media/sofaIcon.26f0e16970925a1cc917.jpeg",
-    "static/media/right-arrow.png": "/reactBoocamp/static/media/right-arrow.952cb10e8895ccb6be0a.png",
-    "static/media/burguer-icon.png": "/reactBoocamp/static/media/burguer-icon.f8ae5dc9ccc0595a5b6a.png",
-    "static/media/cart-icon.png": "/reactBoocamp/static/media/cart-icon.16fd6d4c78634c9821fa.png",
-    "index.html": "/reactBoocamp/index.html",
-    "main.5b75e24b.css.map": "/reactBoocamp/static/css/main.5b75e24b.css.map",
-    "main.8ec3c0f1.js.map": "/reactBoocamp/static/js/main.8ec3c0f1.js.map",
-    "787.08dc6f92.chunk.js.map": "/reactBoocamp/static/js/787.08dc6f92.chunk.js.map"
+    "main.css": "/wa-react-2021-q4-internal-capstone-project/static/css/main.5b75e24b.css",
+    "main.js": "/wa-react-2021-q4-internal-capstone-project/static/js/main.6484383d.js",
+    "static/js/787.08dc6f92.chunk.js": "/wa-react-2021-q4-internal-capstone-project/static/js/787.08dc6f92.chunk.js",
+    "static/media/left-arrow.png": "/wa-react-2021-q4-internal-capstone-project/static/media/left-arrow.d1293a8649610471a10b.png",
+    "static/media/sofaIcon.jpeg": "/wa-react-2021-q4-internal-capstone-project/static/media/sofaIcon.26f0e16970925a1cc917.jpeg",
+    "static/media/right-arrow.png": "/wa-react-2021-q4-internal-capstone-project/static/media/right-arrow.952cb10e8895ccb6be0a.png",
+    "static/media/burguer-icon.png": "/wa-react-2021-q4-internal-capstone-project/static/media/burguer-icon.f8ae5dc9ccc0595a5b6a.png",
+    "static/media/cart-icon.png": "/wa-react-2021-q4-internal-capstone-project/static/media/cart-icon.16fd6d4c78634c9821fa.png",
+    "index.html": "/wa-react-2021-q4-internal-capstone-project/index.html",
+    "main.5b75e24b.css.map": "/wa-react-2021-q4-internal-capstone-project/static/css/main.5b75e24b.css.map",
+    "main.6484383d.js.map": "/wa-react-2021-q4-internal-capstone-project/static/js/main.6484383d.js.map",
+    "787.08dc6f92.chunk.js.map": "/wa-react-2021-q4-internal-capstone-project/static/js/787.08dc6f92.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b75e24b.css",
-    "static/js/main.8ec3c0f1.js"
+    "static/js/main.6484383d.js"
   ]
 }
