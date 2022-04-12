@@ -2,7 +2,7 @@
   "name": "bootcamp-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AnaGuerreroH.github.io/reactBoocamp",
+  "homepage": "https://AnaGuerreroH.github.io/wa-react-2021-q4-internal-capstone-project",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
