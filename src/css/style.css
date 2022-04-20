@@ -1,5 +1,19 @@
 .sectionTitle{
   font-size: '2rem';
   font-weight:'bold';
-  font-family:"Roboto"
+  font-family: "Roboto", sans-serif;
+}
+
+html, #root, .App, body{
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer{
+  margin-top: auto;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
 }

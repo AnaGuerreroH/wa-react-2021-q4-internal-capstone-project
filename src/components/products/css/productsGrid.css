@@ -1,0 +1,23 @@
+.viewAllBtn{
+    background-color: #8019c8;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 8px 35px;
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+
+.leftArrow, .rightArrow{
+    width: 30px;
+    margin: 0 10px;
+}
+
+.paginationWrapper{
+    margin: 10px 0;
+}
+
+.products{
+    font-family: "Roboto", sans-serif;
+}

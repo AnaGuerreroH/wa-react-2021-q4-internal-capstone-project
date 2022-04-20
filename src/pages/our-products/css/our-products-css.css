@@ -1,0 +1,39 @@
+.categoriesWrapper{
+    width: 20%;
+}
+
+.productWrapper{
+    width: 80%;
+}
+
+.ourProductsWrapper{
+    display: -webkit-box;
+}
+
+.ourProductsBody{
+    margin-bottom: 45px;
+    background-color: #f5f5f5;
+}
+
+h1{
+    width: fit-content;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #19c880;
+}
+
+@media only screen and (max-width: 1000px){
+    .categoriesWrapper{
+        width: 100%;
+    }
+    
+    .productWrapper{
+        width: 100%;
+    }
+    
+    .ourProductsWrapper{
+        display: block;
+    }
+}

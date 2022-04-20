@@ -3,7 +3,6 @@ import { StyleSheet, Text } from 'react-native'
 
 const styles = StyleSheet.create({
     text:{
-        fontFamily:"Roboto",
         fontSize:'18px',
         paddingBottom: '5px'
     }
@@ -11,9 +10,9 @@ const styles = StyleSheet.create({
 
 const Footer = () => {
   return(
-    <div style={{display: "grid", paddingBottom: '20px'}}>
+    <div style={{display: "grid", paddingBottom: '20px', background:'#fff'}}>
       <Text style={styles.text}>Ecommerce created during Wizeline’s Academy React Bootcamp</Text>
-      <Text style={styles.text}>Realizado por Ana Guerrero</Text>
+      <Text style={styles.text}>Made by Ana Guerrero</Text>
     </div>
   );
 }

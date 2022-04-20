@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import './../../css/carousel.css'
+import './css/carousel.css'
 import { Image, Text, StyleSheet } from 'react-native';
-import myJson from './../../mocks/en-us/featured-banners.json'
+import myJson from '../../mocks/en-us/featured-banners.json'
 
 const styles = StyleSheet.create({
     title:{
         display:'inline-block',
         alignItems:'center',
         textAlign:'center',
-        fontFamily:"Roboto",
         textTransform:'uppercase',
         fontSize:'40px',
         fontWeight:'bold',
@@ -18,7 +17,6 @@ const styles = StyleSheet.create({
         display:'inline-block',
         alignItems:'center',
         textAlign:'center',
-        fontFamily:"Roboto",
         fontSize:'18px',
         color: '#fff'
     }
@@ -94,7 +92,7 @@ function Carousel() {
             <div className="inner" style={{width: '100%'}}>
                 {myJson.results.map((item, index)=>{
                     return(
-                        <CarouselItem title={item.data.title} description={item.data.description[0].text} url={item.data.main_image.url} itemIndex={index} activeItem={activeIndex}/>
+                        <CarouselItem key={index} title={item.data.title} description={item.data.description[0].text} url={item.data.main_image.url} itemIndex={index} activeItem={activeIndex}/>
                     )
                 })}
             </div>
@@ -102,7 +100,7 @@ function Carousel() {
                 {
                     myJson.results.map((item, index)=>{
                         return(
-                            <span className={`${index === activeIndex? "active": ""}`} onClick={()=>{updateIndex(index)}} ></span>
+                            <span key={index} className={`${index === activeIndex? "active": ""}`} onClick={()=>{updateIndex(index)}} ></span>
                         )
                     })
                 }
