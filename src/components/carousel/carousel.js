@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './css/carousel.css'
 import { Image, Text, StyleSheet } from 'react-native';
-import myJson from '../../mocks/en-us/featured-banners.json'
+import { useFeaturedBanners } from "../../utils/hooks/useFeaturedBanners";
 
 const styles = StyleSheet.create({
     title:{
@@ -23,15 +23,15 @@ const styles = StyleSheet.create({
 })
 
 export const CarouselItem = (props) => {
-    const {title, description, url, itemIndex, activeItem} = props
+    const {title, description, url, itemIndex, activeItem, totalItems} = props
     
     var measure = 0
     
     if(itemIndex === activeItem){
         measure = 0
-    } else if(activeItem===0 && itemIndex===myJson.results.length-1){
+    } else if(activeItem===0 && itemIndex===totalItems-1){
         measure = -100
-    } else if(itemIndex===0 && activeItem===myJson.results.length-1){
+    } else if(itemIndex===0 && activeItem===totalItems-1){
         measure = 100
     } else {
         const diff = itemIndex - activeItem
@@ -60,11 +60,12 @@ export const CarouselItem = (props) => {
 function Carousel() {
     const [activeIndex, setActiveIndex] = useState(0)
     const [paused, setPause] = useState(false)
+    const {data: banners = [], isLoading, error } = useFeaturedBanners()
 
     const updateIndex = (newIndex) => {
         if(newIndex<0){
-            newIndex = myJson.results.length-1
-        } else if(newIndex>= myJson.results.length){
+            newIndex = banners.results.length-1
+        } else if(newIndex>= banners.results.length){
             newIndex = 0
         }
         setActiveIndex(newIndex)
@@ -84,27 +85,39 @@ function Carousel() {
         };
     })
 
+    const showBanners = () => {
+        if(banners.results!=undefined && banners.results.length>0){
+            return(
+                <div>
+                    <div className="inner" style={{width: '100%'}}>
+                        {banners.results.map((item, index)=>{
+                            return(
+                                <CarouselItem key={index} title={item.data.title} description={item.data.description[0].text} url={item.data.main_image.url} itemIndex={index} activeItem={activeIndex} totalItems={banners.results.length}/>
+                            )
+                        })}
+                    </div>
+                    <div className="indicators">
+                        {
+                            banners.results.map((item, index)=>{
+                                return(
+                                    <span key={index} className={`${index === activeIndex? "active": ""}`} onClick={()=>{updateIndex(index)}} ></span>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+                
+            )
+        }
+    }
+
     return (
         <div className="carousel"
             onMouseEnter={()=>setPause(true)}
             onMouseLeave={()=>setPause(false)}
         >
-            <div className="inner" style={{width: '100%'}}>
-                {myJson.results.map((item, index)=>{
-                    return(
-                        <CarouselItem key={index} title={item.data.title} description={item.data.description[0].text} url={item.data.main_image.url} itemIndex={index} activeItem={activeIndex}/>
-                    )
-                })}
-            </div>
-            <div className="indicators">
-                {
-                    myJson.results.map((item, index)=>{
-                        return(
-                            <span key={index} className={`${index === activeIndex? "active": ""}`} onClick={()=>{updateIndex(index)}} ></span>
-                        )
-                    })
-                }
-            </div>
+            {showBanners()}
+            
         </div>
     );
 };

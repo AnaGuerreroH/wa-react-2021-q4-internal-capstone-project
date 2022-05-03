@@ -10,7 +10,7 @@ function Home({handleRoute}) {
 
             <ListCategories/>
 
-            <ListProducts onChange={handleRoute} />
+            <ListProducts/>
         </div>
     )
 }

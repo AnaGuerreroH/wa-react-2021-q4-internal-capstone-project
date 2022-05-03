@@ -4,6 +4,8 @@ import './css/productsGrid.css'
 import leftArrow from './../../images/left-arrow.png';
 import rightArrow from './../../images/right-arrow.png';
 import categories from '../../mocks/en-us/product-categories.json';
+import { PRODUCT_DETAIL } from "../../utils/constants";
+import { Link } from "react-router-dom";
 
 const styles = StyleSheet.create({
     container:{
@@ -25,15 +27,18 @@ const styles = StyleSheet.create({
 })
 
 const Item = (props)=>{
-    const {mainImage, productName, category, price} = props
+    const {mainImage, productName, category, price, id} = props
     return(
         <div style={{width:'100%', backgroundColor:'#fff', margin: '5px'}}>
-            <Image style={{aspectRatio: 1/1, margin: '10px'}} source={mainImage}/>
-            <div style={{display: 'grid', paddingBottom:'15px'}}>
-                <Text style={{color: '#19c880', fontWeight:'bold', fontSize: '1rem', paddingBottom: '5px'}}>{productName}</Text>
-                <Text>{category}</Text>
-                <Text style={{color: '#8019c8', fontWeight:'bold', paddingTop:'5px', fontSize: '1.25rem'}}>$ {price}</Text>
-            </div>
+            <Link to={`${PRODUCT_DETAIL}${id}`}>
+                <Image style={{aspectRatio: 1/1, margin: '10px'}} source={mainImage}/>
+                <div style={{display: 'grid', paddingBottom:'15px'}}>
+                    <Text style={{color: '#19c880', fontWeight:'bold', fontSize: '1rem', paddingBottom: '5px'}}>{productName}</Text>
+                    <Text>{category}</Text>
+                    <Text style={{color: '#8019c8', fontWeight:'bold', paddingTop:'5px', fontSize: '1.25rem'}}>$ {price}</Text>
+                </div>
+            </Link>
+            <button className="addToCart">Add to cart</button>
         </div>
     );
 };
@@ -41,7 +46,7 @@ const Item = (props)=>{
 const renderItem = ({item})=>{
     var category = categories.results.filter((category)=>{ return category.id === item.data.category.id})
     return (
-        <Item mainImage={item.data.mainimage.url} productName={item.data.name} category={category[0].data.name} price={item.data.price}/>
+        <Item mainImage={item.data.mainimage.url} productName={item.data.name} category={category[0].data.name} price={item.data.price} id={item.id}/>
     )
 }
 
